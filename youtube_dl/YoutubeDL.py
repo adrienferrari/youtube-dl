@@ -761,6 +761,7 @@ class YoutubeDL(object):
             if match_filter is not None:
                 ret = match_filter(info_dict)
                 if ret is not None:
+                    self.record_download_archive(info_dict)
                     return ret
 
         return None
